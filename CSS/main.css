@@ -3,21 +3,42 @@
   margin: 0;
 }
 
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  -webkit-transform: translate(-30%, -70%);
-          transform: translate(-30%, -70%);
+
+
+.homeLogo {
+  /* width: 40%; */
+  width: 120%;
+  height: 140%;
+  margin-left: -10%;
+  margin-top: -5%;
+  /* position: relative;
+  width:60%;
+  height:40%; */
 }
 
-.ddg {
-  display: block;
-  position: relative;
-  width:60%;
-  height:40%;
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0021b;
+}
 
+#logoLink {
+  width: 33%;
+  height: 19vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 33%;
+  margin-top: 15%;
+}
+
+#logoimg {
+  display: block;
+  
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .links {
@@ -46,6 +67,7 @@ a:active {
 
 .s-input {
   border-color: black;
+  border-width: 0;
   background-color: black;
   width: 33%;
   margin-left: 30%;
@@ -53,6 +75,7 @@ a:active {
   padding-right: 36px;
   padding-bottom: 18px;
   font-size: 15px;
+  border-radius: 5rem;
 }
 
 .s-icon {
@@ -65,4 +88,3 @@ a:active {
 input:focus {
   outline: 1px solid black;
 }
-/*# sourceMappingURL=main.css.map */
