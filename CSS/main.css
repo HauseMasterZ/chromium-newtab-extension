@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  width: 42vw;
+  width: 800px;
 }
 
 .search-container input {
@@ -69,6 +69,15 @@ body {
 }
 
 img.logo {
-  width: 40vw;
+  width: 750px;
   height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-container {
+    width: 50vw;
+  }
+  img.logo {
+    width: 50vw;
+  }
 }/*# sourceMappingURL=main.css.map */
