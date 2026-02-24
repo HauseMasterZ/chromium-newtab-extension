@@ -1,83 +1,67 @@
-body {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+* {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
-.top-right {
+.logo img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 15% auto 0 auto; /* pushes image down and centers it */
+}
+
+
+
+
+
+.links {
   position: absolute;
   top: 20px;
-  right: 10px;
-}
-
-.top-right a {
-  color: red;
-  margin-left: 10px;
-  text-decoration: none;
-  font-size: 15px;
+  right: 20px;
   word-spacing: 10px;
-}
-
-.search-container button:hover {
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.top-right a:active {
-  text-decoration: underline;
-  color: blue;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  width: 800px;
-}
-
-.search-container input {
-  width: 100%;
-  padding: 15px;
-  background: transparent;
-  border: none;
-  color: red;
   font-size: 15px;
 }
 
-.search-container input:focus {
-  outline: none;
+#input-id {
+  border-color: black;
+  border-width: 0px;
+  border-radius: 2px solid black;
 }
 
-.search-container button {
-  padding: 15px;
-  background: transparent;
-  border: none;
-  color: #fff;
+a {
+  color: #d0021b;
+  text-decoration: none;
 }
 
-.search-container .src {
-  height: 30px;
-  width: auto;
+a:active {
+  color: #001aff;
 }
 
-img.logo {
-  width: 750px;
-  height: auto;
+.s-bar {
+  position: absolute;
+  top: 55%;
+  width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .search-container {
-    width: 50vw;
-  }
-  img.logo {
-    width: 50vw;
-  }
+.s-input {
+  border-color: black;
+  background-color: black;
+  width: 33%;
+  margin-left: 30%;
+  padding-top: 18px;
+  padding-right: 36px;
+  padding-bottom: 18px;
+  font-size: 15px;
+}
+
+.s-icon {
+  position: absolute;
+  margin-left: 66%;
+  margin-top: -5px;
+  padding: 18px;
+}
+
+input:focus {
+  outline: 1px solid black;
 }/*# sourceMappingURL=main.css.map */
