@@ -1,37 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
     <title>New Tab</title>
-    <link rel="stylesheet" href="CSS/main.css" />
-  </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-  <body>
-    <div class="top-right">
-      <a href="https://www.youtube.com/">YouTube</a>
-      <a href="https://www.reddit.com/">Reddit</a>
-      <a href="https://leetcode.com/">LeetCode</a>
-      <a href="https://github.com/HauseMasterZ/">GitHub</a>
-      <a href="https://app.standardnotes.com/">StandardNotes</a>
-      <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+        body {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Top-right links */
+        .top-links {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            display: flex;
+            gap: 11px;
+        }
+
+        .top-links a {
+            color: red;
+            text-decoration: none;
+            font-size: 17px;
+            opacity: 0.8;
+        }
+
+        .top-links a:active {
+            color: blue;
+        }
+
+        .top-links a:hover {
+            opacity: 1;
+        }
+
+        /* Center container */
+        .center {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 500px;
+            width: 80%;
+            margin-bottom: 10px; /* extremely close */
+
+        }
+
+        /* Search bar */
+        .search-container {
+            position: relative;
+            width: 50rem;
+            max-width: 80%;
+        }
+
+        .search-container input {
+            width: 100%;
+            background: transparent;
+            border: 0px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-container input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Top right links -->
+    <div class="top-links">
+        <a href="https://reddit.com">Reddit</a>
+        <a href="https://ytify.pp.ua/">Ytify</a>
+        <a href="https://music.youtube.com/playlist?list=PLK5tc6FSo175xc8zNBMrUZJIY9Q_K9I4w">YTMusic</a>
+        <a href="https://discord.com/channels/@me">Discord</a>
+        <a href="https://app.notesnook.com/notes">Notesnook</a>
+        <a href="https://v3-hub.atk.store/">ATK</a>
+        <a href="https://www.mchose.com.cn/#/connectDevice">Mchose</a>
+        <a href="https://photos.google.com/u/1/">Gphotos</a>
+        <a href="https://youtube.com">YouTube</a>
+        <a href="https://mail.google.com/mail/u/0/">Gmail</a>
     </div>
-    <a href="https://archlinux.org/">
-      <img class="logo" src="Images/archlinux.png" alt="Arch Logo" />
-    </a>
-    <div class="search-container">
-      <form
-        action="https://www.google.com/search"
-        method="get"
-        style="display: contents"
-      >
-        <input type="text" name="q" placeholder="Privacy Simplified" />
-        <button type="submit">
-          <img src="./Images/search.svg" alt="" class="src" />
-        </button>
-      </form>
+
+    <!-- Center content -->
+    <div class="center">
+        <img 
+            class="logo" 
+            src="Images/rogreflect.jpg" 
+            alt="Logo"
+        >
+
+<form class="search-container" action="https://www.google.com/search" method="GET">
+    <input 
+        type="text" 
+        name="q" 
+        placeholder="Search..." 
+        autocomplete="off"
+    >
+    <span class="search-icon">
+        <img class="search-logo" src="Images/search.svg" alt="Search">
+    </span>
+</form>
+
     </div>
-    <script src="JS/main.js"></script>
-  </body>
+
+</body>
 </html>
