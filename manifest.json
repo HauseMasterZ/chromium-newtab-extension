@@ -5,11 +5,14 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
+  "permissions": ["tabs"],
   "icons": {
     "16": "Images/icon16.png",
     "48": "Images/icon48.png",
     "128": "Images/icon128.png"
   },
-
-  "manifest_version": 3
+  "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }

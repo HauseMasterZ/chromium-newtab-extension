@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>New Tab</title>
+    <link rel="icon" href="images/icon16.png" sizes="16x16">
     <style>
         * {
             margin: 0;
@@ -18,7 +19,30 @@
             overflow: hidden;
         }
 
-        /* Top-right links */
+        .top-left-links {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            display: flex;
+            gap: 11px;
+        }
+
+        .top-left-links a {
+            color: red;
+            text-decoration: none;
+            font-size: 17px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .top-left-links a:active {
+            color: blue;
+        }
+
+        .top-left-links a:hover {
+            opacity: 1;
+        }
+
         .top-links {
             position: absolute;
             top: 20px;
@@ -42,7 +66,6 @@
             opacity: 1;
         }
 
-        /* Center container */
         .center {
             height: 80vh;
             display: flex;
@@ -54,11 +77,9 @@
         .logo {
             max-width: 500px;
             width: 80%;
-            margin-bottom: 10px; /* extremely close */
-
+            margin-bottom: 10px;
         }
 
-        /* Search bar */
         .search-container {
             position: relative;
             width: 50rem;
@@ -87,27 +108,24 @@
             opacity: 0.6;
             pointer-events: none;
         }
-
-
     </style>
 </head>
 <body>
 
-    <!-- Top right links -->
+    <div class="top-left-links">
+        <a href="#" id="link-l">L</a>
+        <a href="#" id="link-m">M</a>
+        <a href="#" id="link-r">R</a>
+    </div>
+
     <div class="top-links">
-        <a href="https://reddit.com">Reddit</a>
-        <a href="https://ytify.pp.ua/">Ytify</a>
         <a href="https://music.youtube.com/playlist?list=PLK5tc6FSo175xc8zNBMrUZJIY9Q_K9I4w">YTMusic</a>
-        <a href="https://discord.com/channels/@me">Discord</a>
         <a href="https://app.notesnook.com/notes">Notesnook</a>
         <a href="https://v3-hub.atk.store/">ATK</a>
         <a href="https://www.mchose.com.cn/#/connectDevice">Mchose</a>
-        <a href="https://photos.google.com/u/1/">Gphotos</a>
         <a href="https://youtube.com">YouTube</a>
-        <a href="https://mail.google.com/mail/u/0/">Gmail</a>
     </div>
 
-    <!-- Center content -->
     <div class="center">
         <img 
             class="logo" 
@@ -115,19 +133,20 @@
             alt="Logo"
         >
 
-<form class="search-container" action="https://www.google.com/search" method="GET">
-    <input 
-        type="text" 
-        name="q" 
-        placeholder="Search..." 
-        autocomplete="off"
-    >
-    <span class="search-icon">
-        <img class="search-logo" src="Images/search.svg" alt="Search">
-    </span>
-</form>
-
+        <form class="search-container" action="https://www.google.com/search" method="GET">
+            <input 
+                type="text" 
+                name="q" 
+                placeholder="Search..." 
+                autocomplete="off"
+            >
+            <span class="search-icon">
+                <img class="search-logo" src="Images/search.svg" alt="Search">
+            </span>
+        </form>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
